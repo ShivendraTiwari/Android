@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape1"
+    android:orientation="vertical">
+
+    <!--    <HorizontalScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/descrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Description"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descrip"
+                android:layout_marginLeft="10dp"
+                android:text="Quantity"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quantity"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/newprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="newprice"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/oldprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/newprice"
+                    android:ellipsize="end"
+                    android:text="oldprice"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toEndOf="@id/oldprice"
+                    android:layout_toRightOf="@id/oldprice"
+                    android:background="@android:color/holo_red_dark"
+                    android:text="ADD TO CART" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/relative1"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/line">
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--    </HorizontalScrollView>-->
+    </ScrollView>
+</RelativeLayout>
